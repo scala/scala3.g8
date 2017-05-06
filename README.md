@@ -2,7 +2,7 @@ A [Giter8][g8] template for a [Dotty] Hello World application
 
 Template usage
 --------------
-Using `sbt` version `0.13.13+`, do `sbt new lampepfl/dotty-hello-world.g8` in the folder where you which clone the template.
+Using `sbt` version `0.13.13+`, do `sbt new lampepfl/dotty.g8` in the folder where you which clone the template.
 
 Template license
 ----------------

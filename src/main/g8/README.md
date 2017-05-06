@@ -1,4 +1,4 @@
-## Hello World example sbt project that compiles using Dotty
+## Template sbt project that compiles using Dotty
 
 ### Usage
 
