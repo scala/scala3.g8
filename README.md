@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/lampepfl/dotty.g8.svg?branch=master)](https://travis-ci.org/lampepfl/dotty.g8/)
+
 A [Giter8][g8] template for a [Dotty] Hello World application
 
 Template usage
