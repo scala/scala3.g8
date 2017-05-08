@@ -15,5 +15,7 @@ lazy val root = (project in file(".")).
     scalaVersion := {
       if (useLatestDottyNightly.value) dottyLatestNightlyBuild.get
       else defaultDottyVersion
-    }
+    },
+
+    libraryDependencies += "com.novocode" % "junit-interface" % "0.11" % "test"
   )

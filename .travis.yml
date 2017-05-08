@@ -14,8 +14,8 @@ script:
   - sbt -Dfile.encoding=UTF8 -J-XX:ReservedCodeCacheSize=256M test
 
   - pushd target/sbt-test/dotty-template/scripted
-  - sbt run
-  - sbt 'set useLatestDottyNightly in root := true' run
+  - sbt run test
+  - sbt 'set useLatestDottyNightly in root := true' run test
   - popd
 
   # Tricks to avoid unnecessary cache updates
