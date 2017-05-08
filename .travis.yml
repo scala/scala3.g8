@@ -15,6 +15,7 @@ script:
 
   - pushd target/sbt-test/dotty-template/scripted
   - sbt run
+  - sbt 'set useLatestDottyNightly in root := true' run
   - popd
 
   # Tricks to avoid unnecessary cache updates
