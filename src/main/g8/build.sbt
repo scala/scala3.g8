@@ -1,21 +1,11 @@
-
-val defaultDottyVersion = "0.1.2-RC1"
-
-val useLatestDottyNightly = settingKey[Boolean]("Use the latest Dotty nightly build.")
+val dottyVersion = "0.1.2-RC1"
 
 lazy val root = (project in file(".")).
   settings(
-    name := "dotty-cross-template",
-    description := "Template sbt project that is cross compiled using Dotty and Scala 2",
+    name := "dotty-simple",
     version := "0.1",
 
-    useLatestDottyNightly := false,
-
-    // To make the compiler and REPL use Dotty
-    scalaVersion := {
-      if (useLatestDottyNightly.value) dottyLatestNightlyBuild.get
-      else defaultDottyVersion
-    },
+    scalaVersion := dottyVersion,
 
     libraryDependencies += "com.novocode" % "junit-interface" % "0.11" % "test"
   )
