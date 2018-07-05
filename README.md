@@ -6,7 +6,7 @@ A [Giter8][g8] template for a minimal [Dotty] project.
 
 Template usage
 --------------
-Using `sbt` version `1.1.4+`, do:
+Using `sbt` version `1.1.5+`, do:
 ```
 sbt new lampepfl/dotty.g8
 ```
