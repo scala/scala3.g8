@@ -1,14 +1,14 @@
-dotty.g8: simple dotty-compiled sbt project template
+scala3.g8: simple scala3-compiled sbt project template
 =================
-[![Build Status](https://travis-ci.org/lampepfl/dotty.g8.svg?branch=master)](https://travis-ci.org/lampepfl/dotty.g8/)
+[![Build Status](https://travis-ci.org/scala/scala3.g8.svg?branch=master)](https://travis-ci.org/scala/scala3.g8/)
 
-A [Giter8][g8] template for a minimal [Dotty] project.
+A [Giter8][g8] template for a minimal [Scala 3] project.
 
 Template usage
 --------------
 Using `sbt`, do:
 ```
-sbt new lampepfl/dotty.g8
+sbt new scala/scala3.g8
 ```
 in the folder where you want to clone the template.
 
@@ -21,5 +21,5 @@ and neighboring rights to this template to the public domain worldwide.
 This template is distributed without any warranty. See <http://creativecommons.org/publicdomain/zero/1.0/>.
 
 [g8]: http://www.foundweekends.org/giter8/
-[Dotty]: http://dotty.epfl.ch/
+[Scala 3]: http://dotty.epfl.ch/
 [Nicolas Stucki]: https://github.com/nicolasstucki
