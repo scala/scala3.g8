@@ -1,4 +1,4 @@
-def main(args: Array[String]): Unit = {
+@main def Hello: Unit = {
     println("Hello world!")
     println(msg)
 }
