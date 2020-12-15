@@ -1,4 +1,4 @@
-@main def Hello: Unit = {
+@main def hello: Unit = {
     println("Hello world!")
     println(msg)
 }
