@@ -1,13 +1,11 @@
+version: ~> 1.0 # needed for imports
+import: scala/scala-dev:travis/default.yml
+
 language: scala
 
-# These directories are cached to S3 at the end of the build
-cache:
-  directories:
-    - $HOME/.ivy2/cache
-    - $HOME/.sbt/boot/
-
-jdk:
-  - openjdk8
+env:
+  - ADOPTOPENJDK=8
+  - ADOPTOPENJDK=11
 
 script:
   ## This runs the template with the default parameters, and runs test within the templated app.
@@ -16,7 +14,3 @@ script:
   - pushd target/sbt-test/dotty-template/scripted
   - sbt run test
   - popd
-
-  # Tricks to avoid unnecessary cache updates
-  - find $HOME/.sbt -name "*.lock" | xargs rm
-  - find $HOME/.ivy2 -name "ivydata-*.properties" | xargs rm
