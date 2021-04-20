@@ -57,8 +57,6 @@ jobs:
       - name: Build project
         run: sbt ++${{ matrix.scala }} test
 
-      - run: pushd target/sbt-test/dotty-template/scripted
+      - run: 'sbt -Dfile.encoding=UTF8 -J-XX:ReservedCodeCacheSize=256M test'
 
-      - run: sbt run test
-
-      - run: popd
+      - run: pushd target/sbt-test/dotty-template/scripted && sbt run test && popd

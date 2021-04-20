@@ -17,9 +17,10 @@ lazy val root = project
 ThisBuild / githubWorkflowJavaVersions := Seq("adopt@1.8.0-275", "adopt@1.11.0-9", "adopt@1.15.0-1")
 ThisBuild / githubWorkflowScalaVersions := scalaVersions
 ThisBuild / githubWorkflowBuildPostamble := Seq(
-  WorkflowStep.Run(List("pushd target/sbt-test/dotty-template/scripted")),
-  WorkflowStep.Run(List("sbt run test")),
-  WorkflowStep.Run(List("popd"))
+  // This runs the template with the default parameters, and runs test within the templated app.
+  WorkflowStep.Run(List("sbt -Dfile.encoding=UTF8 -J-XX:ReservedCodeCacheSize=256M test")),
+
+  WorkflowStep.Run(List("pushd target/sbt-test/dotty-template/scripted && sbt run test && popd")),
 )
 ThisBuild / githubWorkflowPublishTargetBranches := Nil
 Global / onChangedBuildSource := ReloadOnSourceChanges
