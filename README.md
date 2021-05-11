@@ -1,6 +1,6 @@
 scala3.g8: simple scala3-compiled sbt project template
 =================
-[![Build Status](https://travis-ci.org/scala/scala3.g8.svg?branch=master)](https://travis-ci.org/scala/scala3.g8/)
+[![Build Status](https://travis-ci.com/scala/scala3.g8.svg?branch=master)](https://travis-ci.com/scala/scala3.g8/)
 
 A [Giter8][g8] template for a minimal [Scala 3] project.
 
