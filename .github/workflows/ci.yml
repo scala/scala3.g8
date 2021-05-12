@@ -22,11 +22,8 @@ jobs:
     strategy:
       matrix:
         os: [ubuntu-latest]
-        scala: [2.12.2]
-        java:
-          - adopt@1.8.0-275
-          - adopt@1.11.0-9
-          - adopt@1.15.0-1
+        scala: [2.13.5]
+        java: [adopt@1.8, adopt@1.11, adopt@1.15]
     runs-on: ${{ matrix.os }}
     steps:
       - name: Checkout current branch (full)
@@ -59,4 +56,4 @@ jobs:
 
       - run: 'sbt -Dfile.encoding=UTF8 -J-XX:ReservedCodeCacheSize=256M test'
 
-      - run: pushd target/sbt-test/dotty-template/scripted && sbt run test && popd
+      - run: pushd target/sbt-test/scala3-template/scripted && sbt run test && popd
