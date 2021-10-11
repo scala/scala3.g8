@@ -14,7 +14,7 @@ lazy val root = project
     crossScalaVersions := scalaVersions
   )
 
-ThisBuild / githubWorkflowJavaVersions := Seq("adopt@1.8", "adopt@1.11", "adopt@1.15")
+ThisBuild / githubWorkflowJavaVersions := Seq("8", "11", "15")
 ThisBuild / githubWorkflowScalaVersions := scalaVersions
 ThisBuild / githubWorkflowBuildPostamble := Seq(
   // This runs the template with the default parameters, and runs test within the templated app.
