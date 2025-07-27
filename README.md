@@ -1,19 +1,21 @@
-scala3.g8: simple scala3-compiled sbt project template
-=================
+# scala3.g8: simple scala3-compiled sbt project template
+
 [![Continuous Integration](https://github.com/scala/scala3.g8/actions/workflows/ci.yml/badge.svg)](https://github.com/scala/scala3.g8/actions/workflows/ci.yml)
 
 A [Giter8][g8] template for a minimal [Scala 3] project.
 
-Template usage
---------------
+## Template usage
+
 Using `sbt`, do:
+
 ```
 sbt new scala/scala3.g8
 ```
+
 in the folder where you want to clone the template.
 
-Template license
-----------------
+## Template license
+
 Written in 2017 by [Nicolas Stucki]
 
 To the extent possible under law, the author(s) have dedicated all copyright and related
