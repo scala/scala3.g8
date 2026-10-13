@@ -22,7 +22,7 @@ jobs:
     strategy:
       matrix:
         os: [ubuntu-latest]
-        scala: [2.12.21]
+        scala: [3.8.4]
         java: [temurin@17, temurin@21, temurin@25]
     runs-on: ${{ matrix.os }}
     steps:
@@ -66,4 +66,4 @@ jobs:
 
       - run: 'sbt -Dfile.encoding=UTF8 -J-XX:ReservedCodeCacheSize=256M test'
 
-      - run: pushd target/sbt-test/scala3-template/scripted && sbt run test && popd
+      - run: pushd target/out/jvm/scala-3.8.4/scala3-template/sbt-test/scala3-template/scripted && sbt run test && popd
