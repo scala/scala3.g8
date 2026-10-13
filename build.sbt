@@ -3,13 +3,11 @@
 // See http://www.foundweekends.org/giter8/testing.html#Using+the+Giter8Plugin for more details.
 import sbt.protocol.testing.TestResult
 
-// sbt 2.0.10 publishes scripted-sbt for Scala 3.8.4, so ++ 2.12.21 cannot resolve it.
 lazy val scalaVersions = Seq("3.8.4")
 lazy val root = project
   .in(file("."))
   .settings(
     name := "scala3-template",
-    // sbt 2 types test as TestResult. g8Test still returns Unit, so report Passed when it succeeds.
     Test / test := {
       val _ = (Test / g8Test).toTask("").value
       TestResult.Passed
